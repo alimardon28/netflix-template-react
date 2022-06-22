@@ -1,0 +1,44 @@
+.movie {
+  margin: 0;
+  padding: 0;
+}
+
+.movie__hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.movie__hero::-webkit-scrollbar {
+  display: none;
+}
+
+.movie__hero {
+  -ms-overflow-style: none;
+  scrollbar-width: 0;
+}
+
+.movie__hero {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+.movie__img {
+  margin-right: 13px;
+  max-height: 130px;
+}
+
+.movie__img:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  cursor: pointer;
+}
+
+.movie__posterLarge {
+  max-height: 250px;
+  width: 100%;
+}
+/*# sourceMappingURL=Movie.css.map */

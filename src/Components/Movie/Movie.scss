@@ -1,0 +1,36 @@
+.movie {
+  margin: 0;
+  padding: 0;
+  &__hero {
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+  }
+
+  &__hero::-webkit-scrollbar {
+    display: none;
+  }
+  &__hero {
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+  }
+  &__hero {
+    object-fit: contain;
+    width: 100%;
+
+  }
+  &__img {
+    margin-right: 13px;
+    max-height: 130px;
+  }
+
+  &__img:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+  }
+
+  &__posterLarge {
+    max-height: 250px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+.movies {
+  margin: 0;
+  padding: 0;
+}
+
+.movies__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.movies__img {
+  width: 170px;
+}
+
+.movies__button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background-color: red;
+  font-weight: 500;
+}
+/*# sourceMappingURL=Movies.css.map */
