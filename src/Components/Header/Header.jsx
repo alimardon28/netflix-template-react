@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from "react"
 import "../Header/Header.scss";
 import netflixicon from "../../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="header">
       <div className="container header__container">
@@ -22,7 +25,9 @@ const Header = () => {
               Русский
             </option>
           </select>
-          <button className="btn btn-danger">Sign In</button>
+          <button onClick={(e) => setOpenModal(!openModal(e))} className="btn btn-danger">
+            Sign In
+          </button>
         </div>
       </div>
 
@@ -45,6 +50,28 @@ const Header = () => {
           <button className="header__btn btn btn-danger">Get Started</button>
         </div>
       </div>
+      <dialog className="dialog" open={openModal}>
+        <h3 className="modal-title">Sign In</h3>
+
+        <div className="inputBox">
+          <input
+            type="text"
+            placeholder="Email address"
+            className="inputBox__inputs"
+          />
+          <input
+            type="password"
+            placeholder="password"
+            className="inputBox__inputs"
+          />
+          <button className="btn inputBox__button  text-light">Sign In</button>
+
+          <div className="checkbox">
+            <input type="checkbox" required className="checkbox_check" />
+            <p className="checkbox_desc">Remember me</p>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };

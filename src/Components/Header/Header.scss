@@ -39,7 +39,8 @@
     line-height: 90px;
   }
   &__desc {
-    line-height: 80px;
+    line-height: 60px;
+    font-size: 30px;
   }
   &__btn-box {
     margin: 0;
@@ -116,5 +117,83 @@
     &__navlink > img {
       width: 120px;
     }
+  }
+}
+
+.dialog {
+  top: 10%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 00.88);
+  width: 30%;
+  height: 80%;
+}
+.modal-title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+}
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+.inputBox__inputs {
+  padding: 18px 18px;
+  margin-top: 30px;
+  background-color: rgba(56, 56, 56, 0.9);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.inputBox__inputs::placeholder {
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+.inputBox__button {
+  margin-top: 30px;
+  background-color: rgb(255, 0, 0);
+  font-size: 22px;
+  font-weight: 500;
+  padding: 15px 20px;
+}
+.checkbox {
+  display: flex;
+  padding-top: 20px;
+}
+.checkbox_check {
+  height: 28px;
+  width: 28px;
+}
+.checkbox_check::-ms-check {
+  background-color: #fff;
+}
+.checkbox_desc {
+  color: #fff;
+  font-size: 14px;
+  margin-left: 14px;
+}
+
+@media screen and (max-width: 1025px) {
+  .dialog {
+    width: 50%;
+    top: 14%;
+    height: 85%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .dialog {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .dialog {
+    width: 80%;
   }
 }
