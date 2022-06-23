@@ -1,15 +1,14 @@
 import React from 'react';
 import { Outlet , Navigate } from 'react-router-dom';
 
-const Private = () => {
+const Private = ({login}) => {
 
 
-    const isLogged=true;
 
     return (
         <>
         {
-            isLogged ? <Outlet/> : <Navigate to="/" />
+            login ? <Outlet/> : <Navigate to="/" />
         }
 
         </>
