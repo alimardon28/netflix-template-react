@@ -6,11 +6,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 14px 20px;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // z-index: 999;
-    // width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
   }
   &__img {
     width: 170px;
@@ -26,4 +26,6 @@
     background-color: rgb(255, 0, 0);
     font-weight: 500;
   }
+
+
 }

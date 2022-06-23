@@ -17,38 +17,36 @@ const Header = ({
 
   return (
     <>
-
-      <div className="header">
-        <div className="container header__container">
-          <a href="/" to="/" className="header__navlink">
-            <img src={netflixicon} alt="" />
-          </a>
-          <div className="header__nav">
-            <select className="btn btn-outline text-light border me-3">
-              <option value="eng" className="bg-secondary text-light">
-                English
-              </option>
-              <option value="uz" className="bg-secondary text-light">
-                Uzbek
-              </option>
-              <option value="ru" className="bg-secondary text-light">
-                Русский
-              </option>
-            </select>
-            <button
-              onClick={(e) => setOpenModal(!openModal(e))}
-              className="btn btn-danger"
-            >
-              Sign In
-            </button>
-
+      {login ? (
+        <></>
+      ) : (
+        <div className="header">
+          <div className="container header__container">
+            <a href="/" to="/" className="header__navlink">
+              <img src={netflixicon} alt="" />
+            </a>
+            <div className="header__nav">
+              <select className="btn btn-outline text-light border me-3">
+                <option value="eng" className="bg-secondary text-light">
+                  English
+                </option>
+                <option value="uz" className="bg-secondary text-light">
+                  Uzbek
+                </option>
+                <option value="ru" className="bg-secondary text-light">
+                  Русский
+                </option>
+              </select>
+              <button
+                onClick={(e) => setOpenModal(!openModal(e))}
+                className="btn btn-danger"
+              >
+                Sign In
+              </button>
+            </div>
           </div>
+          <HeaderMain />
 
-        </div>
-        <HeaderMain/>
-        {login ? (
-          <></>
-        ) : (
           <dialog className="dialog" open={openModal}>
             <h3 className="modal-title">Sign In</h3>
 
@@ -84,8 +82,8 @@ const Header = ({
               </div>
             </div>
           </dialog>
-        )}
-      </div>
+        </div>
+      )}
     </>
   );
 };

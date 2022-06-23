@@ -10,19 +10,28 @@ function App() {
   const [password, setPassword] = useState("");
   const [login, setLogin] = useState(false);
 
-  let loginTrue={
-    username:'alimardon',
-    password:'20022812'
-  }
+  let loginTrue = {
+    username: "alimardon",
+    password: "20022812",
+  };
 
   const isAuth = () => {
-     setLogin(loginTrue.username===userName && loginTrue.password===password);
-  }
+    setLogin(
+      loginTrue.username === userName && loginTrue.password === password
+    );
+  };
 
   return (
     <>
       <BrowserRouter>
-        <Header isAuth={isAuth} login={login} username={userName} setUsername={setUsername} password={password} setPassword={setPassword} />
+        <Header
+          isAuth={isAuth}
+          login={login}
+          username={userName}
+          setUsername={setUsername}
+          password={password}
+          setPassword={setPassword}
+        />
 
         <Routes>
           <Route path="/" element={<Private login={login} />}>
