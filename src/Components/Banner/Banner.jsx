@@ -12,9 +12,9 @@ const Banner = () => {
       const request = await axios.get(requests.fetchNetflixOriginals);
 
       setMovie(
-        request.data.request[
+        request.data.request(
           Math.floor(Math.random() * request.data.results.length)
-        ]
+        )
       );
 
       return requests;
