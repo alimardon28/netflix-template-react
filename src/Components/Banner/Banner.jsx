@@ -8,19 +8,13 @@ const Banner = () => {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(requests.fetchNetflixOriginals);
+    const fetchMovie = async () => {
+      const responseData = await axios.get(requests.fetchNetflixOriginals);
+      console.log(responseData);
+    };
 
-      setMovie(
-        request.data.request(
-          Math.floor(Math.random() * request.data.results.length)
-        )
-      );
-
-      return requests;
-    }
-    fetchData();
-  }, []);
+    fetchMovie();
+  });
 
   return (
     <div
